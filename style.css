@@ -2,9 +2,34 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
+  margin: 8;
+  padding: 8;
   box-sizing: border-box;
 }
 
 /* START BELOW */
+h1 {
+font-family: Outfit, sans-serif;
+font-size: 40px;
+}
+h2 {
+font-family: Outfit, sans-serif;
+font-size: 28px;
+}
+h3 {
+font-family: Outfit, sans-serif;
+font-size: 20px;
+}
+body {
+font-family: Plus Jakarta Sans, sans-serif;
+font-size: 16px;
+background-color: #18181B;
+color: #FAFAFA;
+primary-color: #6240B2;
+accent-color: #CA9502;
+border-style: solid;
+
+}
+section {
+  border: 1px solid #CA9502;
+}

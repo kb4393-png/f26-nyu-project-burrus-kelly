@@ -2,7 +2,6 @@
 
 ### **Step-by-Step: Getting Set Up**
 
-
 **1\. Click the green "Use this template" button**
 
 This creates a brand new repository under your own GitHub account, pre-loaded with the starting files.
@@ -39,20 +38,20 @@ Codespaces is a development environment that runs entirely in your browser. Inst
 
 Normally, getting a development environment set up requires installing and configuring a bunch of tools:
 
-* A code editor (VS Code)  
-* A terminal (command line)  
-* Git (version control)  
-* Node.js, Python, or whatever runtime the project needs  
-* Extensions, themes, settings
+- A code editor (VS Code)
+- A terminal (command line)
+- Git (version control)
+- Node.js, Python, or whatever runtime the project needs
+- Extensions, themes, settings
 
 Each one of these can break in unique ways depending on your operating system, your computer's permissions, or just bad luck. **Codespaces eliminates all of that.** You click one button and you're in a fully working environment. No "it works on my machine" problems.
 
 ### **How It Works (High Level)**
 
-1. A project lives in a GitHub repository.  
-2. You click the green **Code** button and select **Open with Codespaces**.  
-3. GitHub spins up a lightweight virtual machine running Linux, installs the project's dependencies automatically, and opens a browser-based version of VS Code.  
-4. You code, save, and commit just like you would on your local machine.  
+1. A project lives in a GitHub repository.
+2. You click the green **Code** button and select **Open with Codespaces**.
+3. GitHub spins up a lightweight virtual machine running Linux, installs the project's dependencies automatically, and opens a browser-based version of VS Code.
+4. You code, save, and commit just like you would on your local machine.
 5. When you're done, you stop the Codespace. Next time you come back, everything is exactly where you left it.
 
 The environment is defined by a file called `devcontainer.json` (or `.devcontainer/`) in the repository. It's like a recipe that tells GitHub "this project needs X, Y, and Z."
@@ -61,15 +60,33 @@ The environment is defined by a file called `devcontainer.json` (or `.devcontain
 
 A cold start takes **1–3 minutes**. Here's why:
 
-* **A new virtual machine has to boot.** Codespaces isn't "running" until you open it. There's no always-on computer — one is created for you on demand. That means spinning up an OS from scratch.  
-* **Your dependencies install.** If the project requires packages or libraries, Codespaces runs the install process when it starts. This is the same `npm install` or `pip install` you'd run locally — it just happens automatically.  
-* **Extensions and settings sync.** VS Code loads your extensions, themes, and preferences from your GitHub account.
+- **A new virtual machine has to boot.** Codespaces isn't "running" until you open it. There's no always-on computer — one is created for you on demand. That means spinning up an OS from scratch.
+- **Your dependencies install.** If the project requires packages or libraries, Codespaces runs the install process when it starts. This is the same `npm install` or `pip install` you'd run locally — it just happens automatically.
+- **Extensions and settings sync.** VS Code loads your extensions, themes, and preferences from your GitHub account.
 
 **Once it's running, it's fast.** The delay is only on the first launch of the day (or after you've manually stopped the Codespace). If you keep it open between sessions, there's no wait.
 
 ### **Tips**
 
-* **Don't close your Codespace mid-session.** Just leave the tab open. If you close it, stop the Codespace from the GitHub dashboard so it doesn't eat into your monthly usage hours.  
-* **Your work is saved automatically.** Even if the Codespace stops, the files are stored on GitHub. You won't lose anything.  
-* **You get a fixed number of free hours per month** through the GitHub Student Developer Pack. A cold start uses some of those hours just booting up, so it's worth keeping one Codespace alive while you're actively working.  
-* **If you need to work offline,** you can always install VS Code and Git locally instead but it does take some set up — Codespaces is a convenience, not a requirement.
+- **Don't close your Codespace mid-session.** Just leave the tab open. If you close it, stop the Codespace from the GitHub dashboard so it doesn't eat into your monthly usage hours.
+- **Your work is saved automatically.** Even if the Codespace stops, the files are stored on GitHub. You won't lose anything.
+- **You get a fixed number of free hours per month** through the GitHub Student Developer Pack. A cold start uses some of those hours just booting up, so it's worth keeping one Codespace alive while you're actively working.
+- **If you need to work offline,** you can always install VS Code and Git locally instead but it does take some set up — Codespaces is a convenience, not a requirement.
+
+---
+
+## **Documentation**
+
+### 10/22/26
+
+The data I'm displaying is comprised of little educational tiles that can serve as a resource for users who are not strong sight readers. Because I don't have any repeating information in my index.html page, I decided to create a second page for this assignment called education.html. In the site, this page can be accessed from the navigation bar at the top, under "Music Education Resources". Each tile contains a title, a description, and an image of what the concept looks like in real sheet music.
+<br>
+<br>I used Javascript to create a separate education.js file to store my array, and a script.js file to run the actual Javascript code. Javascript uses the array information in education.js to know what information to include in each educational tile, and runs script from script.js to create tiles from that information in education.html.
+<br>
+<br>Challenges:
+
+- I initially included a typo in my code, saying "getElement**s**ById" instead of singular element. I also couldn't figure out why nothing was loading in my site - it turns out that I had to include the following lines in education.html, which I then looked for in the codealong 06 file and found, clarifying what it meant:
+  \<script defer src="js/education.js"></script>
+  \<script defer src="js/script.js"></script>
+- I couldn't figure out what command to use to show images alongside the text. Turned out instead of following the same formula as title.textContent, I had to use image.src. I tried to ask the AI assistant what this meant, and why I needed to do it this way, but I was not clear enough in my ask, and it just went in and fixed my code for me. I had to then ask it to undo what it did and explain to me what to do so I could do it myself and understand what I was doing, and then I double-checked my code to make sure everything was back to normal before I made my own attempt.
+- The last challenge I had was just that my images came through at a massive size, overlapping one another, and I wanted to make them a bit smaller to better show the structure. I tried to figure the structure out by myself, using the #education-resources CSS structure recommended in the assignment, but had to Google it in the end. I ended up figuring it out, and got it to a size that I liked.

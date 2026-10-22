@@ -78,8 +78,11 @@ A cold start takes **1–3 minutes**. Here's why:
 ## **Documentation**
 
 ### 10/22/26
-
-The data I'm displaying is comprised of little educational tiles that can serve as a resource for users who are not strong sight readers. Because I don't have any repeating information in my index.html page, I decided to create a second page for this assignment called education.html. In the site, this page can be accessed from the navigation bar at the top, under "Music Education Resources". Each tile contains a title, a description, and an image of what the concept looks like in real sheet music.
+[Figma Mockup Link](https://www.figma.com/design/nAOf9RkdAvkm9qQtZCuUeL/KellyBurrus_Assignment4_Mockups?node-id=0-1&t=nn6uMZSzpGMNu3Gq-1)
+<br>
+<br>This week I added a new site education.html, alongside a collection of images and repeating elements in order to display educational resources to users. The new site is accessible through the navigation bar. I also updated some of the CSS to make sure the tiles looked neat, and to shrink the images in each tile a bit so they did not overlap with one another.
+<br>
+<br>The data I'm displaying is comprised of little educational tiles that can serve as a resource for users who are not strong sight readers. Because I don't have any repeating information in my index.html page, I decided to create a second page for this assignment called education.html. In the site, this page can be accessed from the navigation bar at the top, under "Music Education Resources". Each tile contains a title, a description, and an image of what the concept looks like in real sheet music.
 <br>
 <br>I used Javascript to create a separate education.js file to store my array, and a script.js file to run the actual Javascript code. Javascript uses the array information in education.js to know what information to include in each educational tile, and runs script from script.js to create tiles from that information in education.html.
 <br>
@@ -90,3 +93,4 @@ The data I'm displaying is comprised of little educational tiles that can serve 
   \<script defer src="js/script.js"></script>
 - I couldn't figure out what command to use to show images alongside the text. Turned out instead of following the same formula as title.textContent, I had to use image.src. I tried to ask the AI assistant what this meant, and why I needed to do it this way, but I was not clear enough in my ask, and it just went in and fixed my code for me. I had to then ask it to undo what it did and explain to me what to do so I could do it myself and understand what I was doing, and then I double-checked my code to make sure everything was back to normal before I made my own attempt.
 - The last challenge I had was just that my images came through at a massive size, overlapping one another, and I wanted to make them a bit smaller to better show the structure. I tried to figure the structure out by myself, using the #education-resources CSS structure recommended in the assignment, but had to Google it in the end. I ended up figuring it out, and got it to a size that I liked.
+- I committed my changes before realizing I forgot to add a couple of things in this README, so I had to add them and recommit. Added this challenge, a short summary of what I did this week at the beginning of my documentation entry, and a link to my Figma mockup.

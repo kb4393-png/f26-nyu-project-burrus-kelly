@@ -94,3 +94,17 @@ A cold start takes **1–3 minutes**. Here's why:
 - I couldn't figure out what command to use to show images alongside the text. Turned out instead of following the same formula as title.textContent, I had to use image.src. I tried to ask the AI assistant what this meant, and why I needed to do it this way, but I was not clear enough in my ask, and it just went in and fixed my code for me. I had to then ask it to undo what it did and explain to me what to do so I could do it myself and understand what I was doing, and then I double-checked my code to make sure everything was back to normal before I made my own attempt.
 - The last challenge I had was just that my images came through at a massive size, overlapping one another, and I wanted to make them a bit smaller to better show the structure. I tried to figure the structure out by myself, using the #education-resources CSS structure recommended in the assignment, but had to Google it in the end. I ended up figuring it out, and got it to a size that I liked.
 - I committed my changes before realizing I forgot to add a couple of things in this README, so I had to add them and recommit. Added this challenge, a short summary of what I did this week at the beginning of my documentation entry, and a link to my Figma mockup.
+
+## Structure Audit — [10/26/26]
+
+**Fixed today:**
+- Added Google font link to heads in both index and education pages.
+- Cleaned up section identification, based on assignment feedback.
+- Added margin unit.
+
+**Still missing (building before the layout assignment):**
+- Linking nav links to a page
+- Figure out :root change needed, css might be too hard-coded
+
+**One thing I couldn't figure out:**
+- :root issue in CSS

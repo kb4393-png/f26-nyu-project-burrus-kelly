@@ -2,12 +2,13 @@
 *,
 *::before,
 *::after {
-  margin: 8;
-  padding: 8;
+  margin: 8px;
+  padding: 8px;
   box-sizing: border-box;
 }
 
 /* START BELOW */
+
 h1 {
 font-family: Outfit, sans-serif;
 font-size: 40px;
@@ -26,12 +27,12 @@ font-size: 16px;
 background-color: #18181B;
 color: #FAFAFA;
 primary-color: #6240B2;
-accent-color: #CA9502;
+accent-color: #926900;
 border-style: solid;
 
 }
 section {
-  border: 1px solid #CA9502;
+  border: 1px solid #926900;
 }
 
 #education-resources {

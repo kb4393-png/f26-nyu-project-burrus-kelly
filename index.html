@@ -12,38 +12,53 @@
   <body>
     <!-- START BELOW -->
      <header>
-      <nav>
+      <nav class="navbar">
         <!--to be placed into a hamburger menu in mobile, but expanded in desktop.-->
        <ul>
-        <a href="index.html">Home</a>
-        <a>Choir Website</a>
-        <a>Rehearsal Calendar</a>
-        <a href="education.html">Music Education Resources</a>
-        <a>Sheet Music Hub</a>
+        <li><a href="index.html">Home</a></li>
+        <li><a>Choir Website</a></li>
+       <li><a>Rehearsal Calendar</a></li>
+        <li><a href="education.html">Music Education Resources</a></li>
+        <li><a>Sheet Music Hub</a></li>
        </ul>
       </nav>
      </header>
-     <main>
+     <main class="page">
       <!--HERO SECTION-->
-      <section>
+      <section class="hero">
+        <!--row 1-->
+        <div class="hero-title">
           <h1>Rehearsal Buddy</h1>
           <p>Access sheet music, helpful guides and tips, hear practice tracks - and practice with confidence!</p>
-          <h2>Select a song and get started!</h2>
-          <button><p>[dropdown for song selection]</p></button>
-        <h2>Launch now</h2>
-        <button> Launch Practice Session!</button>
+        </div>
+        <!--row 2-->
+        <div class="hero-selection">
+          <button><p>Select a song and get started!</p></button>
+        </div>
+        <!--row 3-->
+        <div class="hero-launch">
+          <button> Launch Practice Session!</button>
+        </div>
       </section>
       <!-- SELF-STUDY-->
-        <section>
-          <h2>Choose what to see, and hear a practice track:</h2>
-          <button><p>&#127891</p></button>
-          <button><p>&#128216</p></button>
-          <button><p>music player</p></button>
-          <h2> Interactive Sheet Music</h2>
-          <embed src="https://drive.google.com/file/d/1lXLkWXqBrZbqhpIhQ7EFkuNyiSdIkHeg/preview" width="500" height="375" type="application/pdf">
+        <section class="self-study">
+          <!--column 1-->
+          <div class="self-study-controls">
+            <h2>Choose what to see, and hear a practice track:</h2>
+            <button><p>&#127891</p></button>
+            <button><p>&#128216</p></button>
+            <button><p>music player</p></button>
+          </div>
+          <!--column 2-->
+          <div class="sheet-music">
+            <h2> Interactive Sheet Music</h2>
+            <embed src="https://drive.google.com/file/d/1lXLkWXqBrZbqhpIhQ7EFkuNyiSdIkHeg/preview" width="100%"
+            height="500px"
+            type="application/pdf">
+          </div>
         </section>
         <!--CTA: Sign up for Rehearsal-->
-        <section>
+        <section class="cta">
           <h2>Sign up for your next rehearsal below:</h2>
           <button><p>Rehearsal Calendar</p></button>
         </section>

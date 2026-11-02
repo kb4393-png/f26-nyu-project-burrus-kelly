@@ -1,3 +1,11 @@
+:root {
+  --primary-color: #6240b2;
+  --accent-color: #926900;
+  --background-color: #18181b;
+  --text-color: #fafafa;
+  --heading-font: "Outfit", sans-serif;
+  --body-font: "Plus Jakarta Sans", sans-serif;
+}
 /* === RESET === */
 *,
 *::before,
@@ -9,31 +17,48 @@
 
 /* START BELOW */
 
+nav{
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  font-size: 16px;
+}
 h1 {
-font-family: Outfit, sans-serif;
+font-family: var(--heading-font);
 font-size: 40px;
 }
 h2 {
-font-family: Outfit, sans-serif;
+font-family: var(--heading-font);
 font-size: 28px;
 }
 h3 {
-font-family: Outfit, sans-serif;
+font-family: var(--heading-font);
 font-size: 20px;
 }
 body {
-font-family: Plus Jakarta Sans, sans-serif;
+font-family: var(--body-font);
 font-size: 16px;
-background-color: #18181B;
-color: #FAFAFA;
-primary-color: #6240B2;
-accent-color: #926900;
-border-style: solid;
+background-color: var(--background-color);
+color: var(--text-color);
 
 }
 section {
-  border: 1px solid #926900;
+  border: 1px solid var(--accent-color);
 }
+
+
+
+/*Adding button characteristics*/
+button {
+  font-family: var(--body-font);
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  width: fit-content;
+}
+
 
 #education-resources {
   display: grid;
@@ -48,7 +73,72 @@ section {
 }
 
 .item {
-  border: 1px solid #CA9502;
+  border: 1px solid var(--accent-color);
   padding: 16px;
   border-radius: 8px;
+}
+
+/* Style work on navbar to get the text looking more normal.
+*/
+.navbar {
+    display: flex;
+    justify-content: space-between, right;
+    align-items: center; 
+  }
+
+.navbar ul{
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+
+.navbar ul li {
+  list-style-type: none;
+}
+/* LAYOUT PLAN
+   Two-dimensional (gridding these):
+   - header/nav  → logo left, links right
+   - hero        → two rows, text left in top row and centered in bottom row
+   - self-study  → two columns, one narrower one on the left for the controls and options, and a wider one on right for sheet music
+
+   One-dimensional or fine as-is (leaving alone):
+   - cta         → centered stack
+*/
+/* Option A — columns by fraction */
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 8px;
+}
+
+/* hero: keeping it simple to one single column, with buttons located underneath the heading and description.*/
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 16px;
+  button-align: center;
+}
+
+/* self-study: attempted to have one column for the selections on the left side, and the sheet music on the right taking up 2/3 of the page.*/
+/*BREAKPOINT: grid layout changes to expand sheet music when in mobile.
+/* Mobile first — the default */
+.self-study {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: auto;
+  text-align: center;
+}
+
+/* Desktop — rearrange */
+@media (min-width: 768px) {
+  .self-study {
+      display: grid;
+  grid-template-columns: 1fr  2fr;
+  grid-template-rows: 1fr;
+  gap: 8px;
+  text-align: center;
+  }
 }

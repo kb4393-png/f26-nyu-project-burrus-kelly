@@ -6,9 +6,11 @@ educationItems.forEach(function(educationItem){
   const term = document.createElement('h2');
   const description = document.createElement('p');
   const image = document.createElement("img");
+  educationItemDiv.classList.add('item');
 
   term.textContent = educationItem.term;
   image.src = educationItem.imageUrl;
+  image.alt = educationItem.imageAlt;
   description.textContent = educationItem.description;
 
   educationItemDiv.appendChild(term);

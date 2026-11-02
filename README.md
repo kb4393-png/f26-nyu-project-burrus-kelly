@@ -115,17 +115,17 @@ I fixed some things per past feedback I received, including adding borders aroun
 
 [Figma Mockup Link](https://www.figma.com/design/nAOf9RkdAvkm9qQtZCuUeL/KellyBurrus_Assignment4_Mockups?node-id=0-1&t=nn6uMZSzpGMNu3Gq-1)
 
-I continued work on assignment 7, and unsuccessfully attempted a hamburger menu design. Also added some button characteristics. The breakpoint I worked on was to expand the sheet music when formatted for mobile, which I did by changing the grid columns from two to one. I am starting to wish that I chose a different website idea for this project.
+I continued work on assignment 7, and unsuccessfully attempted a hamburger menu design. Also added some button characteristics. The breakpoint I worked on was to expand the sheet music when formatted for mobile, which I did by changing the grid columns from two to one. I am starting to wish that I chose a different website idea for this project, because it feels like I don't have enough sections or separate features to work with with each passing assignment.
 
 **Challenges:**
   - Had a very difficult time understanding the grid system and how it would work with my specific site layout. The hero section was and is the most difficult - I want three rows basically, and just one column.
+  - Did not see the "commit multiple times" request at the end of the assignment until it was too late. What I had already done was add two documentation entries to cover the chunks of work I did. Will keep this in mind for next time.
 
 
 **AI Use:**
   - Used AI to understand some sizing issues in my self-study grid. My sheet music view was not expanding as I needed it to, in order to fill the grid section I created for it.
-  - I asked AI for help getting started with a hamburger menu breakpoint, but I got overwhelmed with it and ended up ditching the whole thing for now, to be picked up another time after more reading and actual research.
+  - I asked AI for help understanding how to get started with a hamburger menu breakpoint, but I got overwhelmed with it and ended up ditching the whole thing for now, to be picked up another time after more reading and actual research.
 
- 
 
 ## Structure Audit — [10/26/26]
 

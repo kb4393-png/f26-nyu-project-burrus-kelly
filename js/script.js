@@ -1,20 +1,19 @@
 
-const container = document.getElementById('education-resources');
-educationItems.forEach(function(educationItem){
+// pageCount: users need to see which page they're currently on, and it needs to start at 1
+let pageCount = 1;
+//pageTotal: page total should always be 18.
+const pageTotal = 18;
+//
+const fwdButton = document.getElementById("fwd-btn");
 
-  const educationItemDiv = document.createElement('div');
-  const term = document.createElement('h2');
-  const description = document.createElement('p');
-  const image = document.createElement("img");
-  educationItemDiv.classList.add('item');
+const backButton = document.getElementById("back-btn");
 
-  term.textContent = educationItem.term;
-  image.src = educationItem.imageUrl;
-  image.alt = educationItem.imageAlt;
-  description.textContent = educationItem.description;
+fwdButton.addEventListener("click", () => {
+  pageCount = pageCount + 1;
+  console.log("currentPage:", pageCount);
+});
 
-  educationItemDiv.appendChild(term);
-  educationItemDiv.appendChild(image);
-  educationItemDiv.appendChild(description);
-  container.appendChild(educationItemDiv);
+backButton.addEventListener("click", () => {
+  pageCount = pageCount - 1;
+  console.log("currentPage:", pageCount);
 });

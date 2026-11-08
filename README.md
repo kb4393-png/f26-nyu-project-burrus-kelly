@@ -1,6 +1,7 @@
 # Rehearsal Buddy
 
 **Latest mockups:** [https://www.figma.com/design/nAOf9RkdAvkm9qQtZCuUeL/KellyBurrus_Assignment4_Mockups?node-id=0-1&t=kF4IcDTFVODnTbqg-1]
+
 **Live site:** [link, once published]
 
 ## Project Log
@@ -12,32 +13,35 @@ Add a new entry at the top each week.
 - **User story:** "As a music learner, I want to quickly turn my sheet music pages, so that I can follow along while singing."
 - **What does the page remember?** The page remembers which page the user is on and which to turn to next.
 - **What does it start at?** It starts at page 1.
-- **What changes it?** There are interactive buttons on the sides of the sheet music. There is also a reset button that brings the user back to page 1, and my stretch goal is to have a page select drop-down.
+- **What changes it?** There are interactive buttons on the sides of the sheet music. There is also a reset button that brings the user back to page 1.
 - **What does the user see?** The user sees the forward and back buttons, and possibly a restart button to bring them back to page 1.
-- **What does the `if/else` decide?** An If/else that hides the forward or back button at either end of the sheet music. It hides the back button on page 1, and hides the forward button on the last page.
+- **What does the `if/else` decide?** An If/else that hides the forward or back button at either end of the sheet music. It hides the back button on page 1, and hides the forward button on the last page. The if/else is also the primary function for flipping the pages and changing the image that pops up, based on the page number.
 
 **What changed:**
-- change
+- The sheet music pages changed when using the forward and back buttons, the restart button brought the page count back to 1. It was really satisfying to have already named my image files a formulaic name, so that when I realized I could just call the specific image and a custom number, it made it way easier to do that. I briefly worried that I would have to give them new id's in the code, but it worked out really smoothly!
+- I had to make some changes to my grid format to make space for the buttons I needed to implement for the state change, so I changed it to 4 columns so the back and forward buttons could be on either side of the sheet music.
+- I updated my sheet music display to convert it into several images instead of working with a pdf. I thought that flipping images back and forth would be a good start for the navigation I wanted to implement, and that maybe down the line I might have an easier time editing the images to be interactive instead of implementing an interactive pdf, which I have heard is a bit beyond scope of an intro class.
 
 **What was hard, and what I tried:**
-- hard
+- It was difficult to understand the logic at first. I tried using the code I already understood to fix up my HTML and my javascript to work together better, and finally got there in the end. It was also difficult to troubleshoot why the buttons were or were not disappearing when they were supposed to. Just when I thought I had it all correct, both directional buttons disappeared when I used the restart button, and I realized I didn't set it up so the forward button ever reappeared. Decided to also re-hide the back button upon restart so that it resets to page 1 defaults I had already set.
 
 **What happened when I tried to break it:**
-- happened
+- My initial attempts to break it mostly had to do with pressing the forward and back buttons a bunch of times when there was no page to turn to that matched the sheet music image formulas. This was before I implemented the hiding of the forward and the back buttons, so it was making me wait several button presses before it would proceed to the next page. Hiding the buttons prevented this from becoming an issue at all, as it totally removed the mechanism for changing the page count.
 
 **What I learned or changed my mind about:**
-- learned
+- I learned a lot about how to think in javascript. I much prefer working with javascript than with css, I find it a lot more engaging and a lot more interesting! I also really enjoyed picking up the different grammar of javascript, like using && instead of a comma in "if (pageCount <= pageTotal && pageCount >= 1)", to express both requirements at once.
 
 **Question for Joey:**
-- question
+- Is this a normal way to flip pages? I wondered if maybe it would have been better to do this process back when we were going through arrays, but I didn't consider it then. Somehow I figured that this might set me up better for an interactive image like I had wanted to do from the beginning, though that's seeming more and more complex the more I learn. Even if I make interactive pngs instead of pdfs.
 
 **Next week's goal:**
-- goal
+- I think I might want to replace my forward and back buttons with the arrows like I have in my mockup, I just have to make those images first. I'd also like to replace some of my elements with the real thing, like the drop-down menu and have the launch button display the rest of the initially-hidden page.
 
 **AI use - I used AI to:**
 - help me understand how to re-upload my images as a series of png files instead of an embedded pdf
 - figure out why my change state was not working. It changed my file for me without asking, so I had to ask it to undo its changes and instead explain the process to me to do it myself. The main issues were that I had education-resources javascript in my script.js file, and that I was not loading my javascript in my HTML.
-
+- help me understand, analyze, and break down the logic in the assignment javascript code examples so I could better use it for my own purposes.
+- help troubleshoot various parts of my code when I was at a loss as to why they weren't working, which nearly always illuminated incorrect grammar/syntax (which was how I learned about using && instead of commas, for example).
 
 ### Week 7 - 11/1/26
 
@@ -104,7 +108,6 @@ I fixed some things per past feedback I received, including adding borders aroun
   - I couldn't figure out what command to use to show images alongside the text. Turned out instead of following the same formula as title.textContent, I had to use image.src. I tried to ask the AI assistant what this meant, and why I needed to do it this way, but I was not clear enough in my ask, and it just went in and fixed my code for me. I had to then ask it to undo what it did and explain to me what to do so I could do it myself and understand what I was doing, and then I double-checked my code to make sure everything was back to normal before I made my own attempt.
   - The last challenge I had was just that my images came through at a massive size, overlapping one another, and I wanted to make them a bit smaller to better show the structure. I tried to figure the structure out by myself, using the #education-resources CSS structure recommended in the assignment, but had to Google it in the end. I ended up figuring it out, and got it to a size that I liked.
   - I committed my changes before realizing I forgot to add a couple of things in this README, so I had to add them and recommit. Added this challenge, a short summary of what I did this week at the beginning of my documentation entry, and a link to my Figma mockup.
-
 
 
 

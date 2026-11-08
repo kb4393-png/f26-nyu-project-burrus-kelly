@@ -5,6 +5,7 @@
   --text-color: #fafafa;
   --heading-font: "Outfit", sans-serif;
   --body-font: "Plus Jakarta Sans", sans-serif;
+  --link-color: #fafafa;
 }
 /* === RESET === */
 *,
@@ -20,10 +21,15 @@
 nav{
   background-color: var(--primary-color);
   color: var(--text-color);
+  
   display: flex;
   justify-content: space-between;
   align-items: right;
   font-size: 16px;
+}
+
+a {
+    color: var(--link-color);
 }
 h1 {
 font-family: var(--heading-font);
@@ -82,7 +88,7 @@ button {
 */
 .navbar {
     display: flex;
-    justify-content: space-between, right;
+    justify-content: space-between;
     align-items: center; 
   }
 
@@ -90,6 +96,7 @@ button {
   display: flex;
   flex-direction: row;
   width: auto;
+  flex-wrap: wrap
 }
 
 .navbar ul li {
@@ -118,7 +125,10 @@ button {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   gap: 16px;
-  button-align: center;
+}
+
+.is-hidden {
+  display: none;
 }
 
 /* self-study: attempted to have one column for the selections on the left side, and the sheet music on the right taking up 2/3 of the page.*/

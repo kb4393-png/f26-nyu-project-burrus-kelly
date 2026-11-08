@@ -7,7 +7,6 @@ const pageTotal = 11;
 const currentPage = document.getElementById("currentpage");
 const fwdButton = document.getElementById("fwd-btn");
 const backButton = document.getElementById("back-btn");
-const pageCounter = document.getElementById("pageCounter");
 const restartButton = document.getElementById("restart")
 
 //fwdButton functionality

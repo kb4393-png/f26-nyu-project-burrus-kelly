@@ -27,6 +27,16 @@
     <section id="dynamic-content">
       <h1>Music Education Resources</h1>
       <p>Here are some quick references to help you better understand your sheet music!</p>
+      <h2>Filter by category below:</h2>
+      <!--Filter mechanism starts here for HTML-->
+      <div id = "musicfilter" class = "filter">
+        <button id = "all" class = "filter-button" data-filter="all">All</button>
+        <button id = "outsidestaff" class = "filter-button" data-filter="outside">Outside Staff Symbols</button>
+        <button id = "insidestaff" class = "filter-button" data-filter="inside">Inside Staff Symbols</button>
+        <button id = "other" class = "filter-button" data-filter="other">Other</button>
+      </div>
+      <!-- text showing how many items out of total are showing up-->
+      <p id="showing" class="showing"></p>
       <div id="education-resources" class="item">
       </div>
     </section>

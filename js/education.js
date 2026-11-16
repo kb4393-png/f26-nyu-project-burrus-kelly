@@ -52,7 +52,7 @@ const outsideButton = document.getElementById("outsidestaff");
 const insideButton = document.getElementById("insidestaff");
 const otherButton = document.getElementById("other");
 const dataFilter = document.getElementById("data-filter");
-const showing = document.getElementById("showing")
+const shown = document.getElementById("showing")
 
 //selecting a given filter button changes the selected category to the button's corresponding category
 allButton.addEventListener("click", () => {

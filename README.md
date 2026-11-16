@@ -10,7 +10,7 @@ Add a new entry at the top each week.
 ### Week 9 - 11/16/26
 
 **Render Plan**
-- **User story:** As a music learner, I want a filter for the music education terminology so that I can look for a term by category instead of by name.
+- **User story:** As a music learner, I want a filter for the music education terminology so that I can look for a term by category instead of by name (which I might not know!).
 - **State:** What does the page remember, and what does it start at?
   - The page remembers what category is selected in the filter. It starts with no categories selected, with all terms displayed.
 - **What changes it:** Which user actions, and what does each one set the state to?
@@ -23,13 +23,24 @@ Add a new entry at the top each week.
   - It highlights the filter option that is currently selected.
 
 **What changed:**
-**Patching vs. rendering:** In 2–3 sentences, what was different about your interaction before and after this week?
-**What was hard, and what I tried:**
-**What happened when I tried to break it:**
-**What I learned or changed my mind about:**
-**Question for Joey:**
-**Next week's goal:**
+
+**Patching vs. rendering:** I had to re-do Week 8 because it did not have to do with my array from Week 6. I re-did that week's assignment with the visual goal of changing the button colors when I clicked on new category buttons in the Music Education page, and then completed this week's render assignment which completed my filtering system to organize the terminology tiles I had built in Week 6. I now have a functioning filtering system that filters my music terms by category!
+
+**What was hard, and what I tried:** It was difficult to try and understand where exactly to place my assignment 6 loop per the instructions "Your existing Assignment 6 loop is probably most of render() already. Move it inside the function and add the if". I ended up doing a lot of trial and error on this step, and eventually hit something that worked. I also had to move forward and call render before I could see if it was actually working, then go back and tinker more.
+
+**What happened when I tried to break it:** Everything worked at the start by the time I got to the "break it" step. I clicked my filter buttons 10+ times, in multiple different orders, and the buttons changed color appropriately, and the categories were correctly showing up. At first I noticed the "showing x of y items" text wasn't changing away from 0, so I referenced the code-along from last week to see if I was missing something, and it turns out I forgot to add the "shown = shown + 1;" line. Once I figured that out, I noticed the count was correct every time as well.
+
+**What I learned or changed my mind about:** I feel like my understanding of Javascript has strengthened this week, especially since having to rework my Music Education site page to be able to use my array from week 6. I've also started a FreeCodeCamp Javascript course as a supplemental resource to improve my vocabulary, so I think that's also been helping. Even though things got a little more complicated this week, I still feel like I enjoy working with Javascript much more than with CSS or HTML. I feel like I only just scratched the surface of learning what render can do, and I could probably stand to do more research on it to fully be able to explain it in my own words.
+
+**Question for Joey:** I'm curious how versatile render is, and what the more unique and fringe use cases for it would be.
+
+**Next week's goal:** Same goal as last week, as I got really caught up in understanding render in my own words this week and didn't have the bandwidth to explore this. "I think I might want to replace my forward and back buttons with the arrows like I have in my mockup, I just have to make those images first. I'd also like to replace some of my elements with the real thing, like the drop-down menu and have the launch button display the rest of the initially-hidden page."
+
 **AI use:**
+- I used AI to help me understand some of the assignment instructions, particularly in Step 1 when discussing Assignment 8 and appropriate ways to prepare for this week. I tried to figure out if there was a way to work with my page-turning assignment from last week, but I had no ideas for it, so I made sure I understood what this part meant before re-doing assignment 8 to have an appropriate starting place for this week.
+- I used it to quickly troubleshoot my build of my button color-changing mechanism I built for the Music Education section so I could move along quicker to this week's work.
+- I used it to troubleshoot several times my tiles would disappear, before realizing I hadn't called render yet.
+- General troubleshooting, identifying syntax errors and out-of-order code snippets.
 
 ### Week 8 — 11/8/26
 

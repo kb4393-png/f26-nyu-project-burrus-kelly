@@ -3,46 +3,49 @@
 let pageCount = 1;
 //pageTotal: page total should always be 11.
 const pageTotal = 11;
-//
 const currentPage = document.getElementById("currentpage");
 const fwdButton = document.getElementById("fwd-btn");
 const backButton = document.getElementById("back-btn");
-const restartButton = document.getElementById("restart")
+const restartButton = document.getElementById("restart");
+const pageReport = document.getElementById("pagenumber");
 
 //fwdButton functionality
 fwdButton.addEventListener("click", () => {
   console.log("currentPage:", pageCount);
   pageCount = pageCount + 1;
-  //if the current page is less than/equal to 11
-  if (pageCount <= pageTotal && pageCount > 0) {
   //change img id currentpage src to Free1-PAGECOUNT.png
-    currentPage.src = `images/Free1-${pageCount}.png`;
-  //display the fwdButton
-    fwdButton.classList.remove("is-hidden");
-  //display the backButton
-    backButton.classList.remove("is-hidden");
+  currentPage.src = `images/Free1-${pageCount}.png`;
+  //display the back button
+  backButton.classList.remove("is-hidden");
+  //if the current page equals the pageTotal (the last page)
+  if (pageCount === pageTotal) {
+    //hide the forward button
+    fwdButton.classList.add("is-hidden");
   }
-  //else: the forward button is hidden
+  //else: the forward button is visible
   else {
-  fwdButton.classList.add("is-hidden");
+  fwdButton.classList.remove("is-hidden");
   }
+  //update pageReport after click
+  pageReport.textContent = `Page ${pageCount} of ${pageTotal}`;
 });
 
 //backButton functionality
 backButton.addEventListener("click", () => {
   console.log("currentPage:", pageCount);
   pageCount = pageCount - 1;
-  //if the current page is less than/equal to 11, and greater than 0
-  if (pageCount <= pageTotal && pageCount >= 1) {
   //change img id currentpage src to Free1-PAGECOUNT.png
-    currentPage.src = `images/Free1-${pageCount}.png`;
-  //display the fwdButton
-    fwdButton.classList.remove("is-hidden");
-  }
-  //else: hide the back button
-  else {
+  currentPage.src = `images/Free1-${pageCount}.png`;
+  //if the current page is equal to 1, hide the back button
+  if (pageCount === 1) {
   backButton.classList.add("is-hidden");
   }
+  //else: the back button is visible
+  else {
+  fwdButton.classList.remove("is-hidden");
+  }
+  //update pageReport after click
+  pageReport.textContent = `Page ${pageCount} of ${pageTotal}`;
 });
 
 //add restart button code
@@ -56,5 +59,8 @@ restartButton.addEventListener("click", ()=> {
   fwdButton.classList.remove("is-hidden");
   //also noticed back button was not hiding after use of restart button, fixed this as well to restate defaults of page 1:
   backButton.classList.add("is-hidden");
+  pageReport.textContent = `Page ${pageCount} of ${pageTotal}`;
 })
 
+//Current Page Sentence in self-study section
+pageReport.textContent = `Page ${pageCount} of ${pageTotal}`;

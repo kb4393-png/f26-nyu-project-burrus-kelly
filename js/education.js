@@ -1,22 +1,4 @@
 const container = document.getElementById('education-resources');
-educationItems.forEach(function(educationItem){
-
-  const educationItemDiv = document.createElement('div');
-  const term = document.createElement('h2');
-  const description = document.createElement('p');
-  const image = document.createElement("img");
-  educationItemDiv.classList.add('item');
-
-  term.textContent = educationItem.term;
-  image.src = educationItem.imageUrl;
-  image.alt = educationItem.imageAlt;
-  description.textContent = educationItem.description;
-
-  educationItemDiv.appendChild(term);
-  educationItemDiv.appendChild(image);
-  educationItemDiv.appendChild(description);
-  container.appendChild(educationItemDiv);
-});
 
 //Arrays for different music education tiles, each explaining a different aspect of reading sheet music.//
 
@@ -52,3 +34,22 @@ const educationItems = [
     imageUrl: "images/staff.png",
     imageAlt: "Sheet music closeup depicting a time signature of 4/4, key signature of D major, and a tempo marking indicating that one quarter note equals 120bpm."
   }];
+
+  educationItems.forEach(function(educationItem){
+
+  const educationItemDiv = document.createElement('div');
+  const term = document.createElement('h2');
+  const description = document.createElement('p');
+  const image = document.createElement("img");
+  educationItemDiv.classList.add('item');
+
+  term.textContent = educationItem.term;
+  image.src = educationItem.imageUrl;
+  image.alt = educationItem.imageAlt;
+  description.textContent = educationItem.description;
+
+  educationItemDiv.appendChild(term);
+  educationItemDiv.appendChild(image);
+  educationItemDiv.appendChild(description);
+  container.appendChild(educationItemDiv);
+});

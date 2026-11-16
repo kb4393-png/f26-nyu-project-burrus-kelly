@@ -7,6 +7,30 @@
 ## Project Log
 Add a new entry at the top each week.
 
+### Week 9 - 11/16/26
+
+**Render Plan**
+- **User story:** As a music learner, I want a filter for the music education terminology so that I can look for a term by category instead of by name.
+- **State:** What does the page remember, and what does it start at?
+  - The page remembers what category is selected in the filter. It starts with no categories selected, with all terms displayed.
+- **What changes it:** Which user actions, and what does each one set the state to?
+  - The user will select the category, and the selected category sets the state to only show those labeled items, hiding the ones that don't match the selected category.
+- **What render() draws:** Which part of the page is rebuilt, and from which array?
+  - The Music Education Resources page is rebuilt, from the array educationItems.
+- **The if inside the loop:** For each item, what does it decide?
+  - It decides whether the chosen category matches the category of any given item.
+- **What else render() works out:** The count, message, or style that comes from the state.
+  - It highlights the filter option that is currently selected.
+
+**What changed:**
+**Patching vs. rendering:** In 2–3 sentences, what was different about your interaction before and after this week?
+**What was hard, and what I tried:**
+**What happened when I tried to break it:**
+**What I learned or changed my mind about:**
+**Question for Joey:**
+**Next week's goal:**
+**AI use:**
+
 ### Week 8 — 11/8/26
 
 **State Plan**
@@ -27,6 +51,7 @@ Add a new entry at the top each week.
 
 **What happened when I tried to break it:**
 - My initial attempts to break it mostly had to do with pressing the forward and back buttons a bunch of times when there was no page to turn to that matched the sheet music image formulas. This was before I implemented the hiding of the forward and the back buttons, so it was making me wait several button presses before it would proceed to the next page. Hiding the buttons prevented this from becoming an issue at all, as it totally removed the mechanism for changing the page count.
+- Per my instructor's feedback, I did not realize before that the back buttons and forward buttons were not hiding on the right count. When I tried to fix this based on guidance, my forward button completely stopped functioning - I realized I forgot to add backticks to my currentPage.src line around the image path, so once that was corrected and I had input the new correct code, the buttons now operate perfectly.
 
 **What I learned or changed my mind about:**
 - I learned a lot about how to think in javascript. I much prefer working with javascript than with css, I find it a lot more engaging and a lot more interesting! I also really enjoyed picking up the different grammar of javascript, like using && instead of a comma in "if (pageCount <= pageTotal && pageCount >= 1)", to express both requirements at once.

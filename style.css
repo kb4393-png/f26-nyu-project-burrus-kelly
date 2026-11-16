@@ -131,10 +131,10 @@ button {
   display: none;
 }
 
-button.is-selected {
+.is-selected {
   background: #926900;
   color: #fafafa;
-
+}
 
 /* self-study: attempted to have one column for the selections on the left side, and the sheet music on the right taking up 2/3 of the page.*/
 /*BREAKPOINT: grid layout changes to expand sheet music when in mobile.

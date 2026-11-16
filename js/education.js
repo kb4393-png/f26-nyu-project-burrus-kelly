@@ -9,7 +9,7 @@ const educationItems = [
     imageUrl: "images/crescendo.png",
     imageAlt: "Sheet music closeup depicting a crescendo symbol going from volume levels mezzo-piano to mezzo-forte, located above a measure.",
     //Adding category for filter system
-    Category:"Outside Staff Symbols"
+    Category:"outside"
   },
   {
     term: "Dotted Note",
@@ -17,7 +17,7 @@ const educationItems = [
     imageUrl: "images/dottednote.png",
     imageAlt: "Sheet music closeup depicting a dotted quarter note in a measure.",
     //Adding category for filter system
-    Category:"Inside Staff Symbols"
+    Category:"inside"
   },
 
   {
@@ -26,7 +26,7 @@ const educationItems = [
     imageUrl: "images/fermata.png",
     imageAlt: "Sheet music closeup depicting a fermata symbol directly above a whole note in an isolated measure.",
     //Adding category for filter system
-    Category:"Outside Staff Symbols"
+    Category:"outside"
   },
   {
     term: "Glissando",
@@ -34,7 +34,7 @@ const educationItems = [
     imageUrl: "images/glissando.png",
     imageAlt: "Sheet music closeup depicting glissando going up from one half note \(A\) to another half note \(B\)",
     //Adding category for filter system
-    Category:"Inside Staff Symbols"
+    Category:"inside"
   },
   {
     term: "Important Staff Markings",
@@ -42,7 +42,7 @@ const educationItems = [
     imageUrl: "images/staff.png",
     imageAlt: "Sheet music closeup depicting a time signature of 4/4, key signature of D major, and a tempo marking indicating that one quarter note equals 120bpm.",
     //Adding category for filter system
-    Category:"Other"
+    Category:"other"
   }];
 
 //selected category defaults to all
@@ -52,82 +52,90 @@ const outsideButton = document.getElementById("outsidestaff");
 const insideButton = document.getElementById("insidestaff");
 const otherButton = document.getElementById("other");
 const dataFilter = document.getElementById("data-filter");
+const showing = document.getElementById("showing")
 
-//selecting a given filter button changes the selected category to the corresponding category
+//selecting a given filter button changes the selected category to the button's corresponding category
 allButton.addEventListener("click", () => {
   selectedCategory = "all";
-  //if category is selected in button, the button highlights yellow, otherwise it is purple
-  if (allButton.dataset.filter === selectedCategory) {
-    allButton.classList.add("is-selected");
-    outsideButton.classList.remove("is-selected");
-    insideButton.classList.remove("is-selected");
-    otherButton.classList.remove("is-selected");
-  }
-  else {
-    allButton.classList.remove("is-selected");
-  }
-  console.log("Selected Category:", selectedCategory);
+  render();
 });
 
 outsideButton.addEventListener("click", () => {
   selectedCategory = "outside";
-  if (outsideButton.dataset.filter === selectedCategory) {
-    outsideButton.classList.add("is-selected");
-    allButton.classList.remove("is-selected");
-    insideButton.classList.remove("is-selected");
-    otherButton.classList.remove("is-selected");
-  }
-  else {
-    outsideButton.classList.remove("is-selected");
-  }
-  console.log("Selected Category:", selectedCategory);
+  render();
 });
 
 insideButton.addEventListener("click", () => {
   selectedCategory = "inside";
-  if (insideButton.dataset.filter === selectedCategory) {
-    insideButton.classList.add("is-selected");
-    outsideButton.classList.remove("is-selected");
-    allButton.classList.remove("is-selected");
-    otherButton.classList.remove("is-selected");
-  }
-  else {
-    insideButton.classList.remove("is-selected");
-  }
-  console.log("Selected Category:", selectedCategory);
+  render();
 });
 
 otherButton.addEventListener("click", () => {
   selectedCategory = "other";
-  if (otherButton.dataset.filter === selectedCategory) {
-    otherButton.classList.add("is-selected");
-    outsideButton.classList.remove("is-selected");
-    insideButton.classList.remove("is-selected");
+  render();
+});
+
+//Render: asks if items in educationItems match the selected category
+function render() {
+  // Clears old items
+  container.innerHTML = "";
+  // Loops over array
+  let shown = 0;
+  educationItems.forEach(function(educationItem){
+  
+  if (selectedCategory === "all" || educationItem.Category === selectedCategory) {
+    const educationItemDiv = document.createElement('div');
+    const term = document.createElement('h2');
+    const description = document.createElement('p');
+    const image = document.createElement("img");
+    educationItemDiv.classList.add('item');
+
+    term.textContent = educationItem.term;
+    image.src = educationItem.imageUrl;
+    image.alt = educationItem.imageAlt;
+    description.textContent = educationItem.description;
+
+    educationItemDiv.appendChild(term);
+    educationItemDiv.appendChild(image);
+    educationItemDiv.appendChild(description);
+    container.appendChild(educationItemDiv);
+//updates the number of tiles shown
+    shown = shown + 1;
+    }
+  });
+  
+
+  //introduces the text showing how many items are displayed
+  showing.textContent = "Showing " + shown + " of " + educationItems.length + " terms.";
+  //brings back the color-highlighted buttons when item is selected that I previously had.
+  if (selectedCategory === "all") {
+    allButton.classList.add("is-selected");
+  }
+  else {
     allButton.classList.remove("is-selected");
+  }
+
+  if (selectedCategory === "inside") {
+    insideButton.classList.add("is-selected");
+  }
+  else {
+    insideButton.classList.remove("is-selected");
+  }
+
+  if (selectedCategory === "outside") {
+    outsideButton.classList.add("is-selected");
+  }
+  else {
+    outsideButton.classList.remove("is-selected");
+  }
+
+  if (selectedCategory === "other") {
+    otherButton.classList.add("is-selected");
   }
   else {
     otherButton.classList.remove("is-selected");
   }
-  console.log("Selected Category:", selectedCategory);
-});
 
+};
 
-
-  educationItems.forEach(function(educationItem){
-
-  const educationItemDiv = document.createElement('div');
-  const term = document.createElement('h2');
-  const description = document.createElement('p');
-  const image = document.createElement("img");
-  educationItemDiv.classList.add('item');
-
-  term.textContent = educationItem.term;
-  image.src = educationItem.imageUrl;
-  image.alt = educationItem.imageAlt;
-  description.textContent = educationItem.description;
-
-  educationItemDiv.appendChild(term);
-  educationItemDiv.appendChild(image);
-  educationItemDiv.appendChild(description);
-  container.appendChild(educationItemDiv);
-});
+render();

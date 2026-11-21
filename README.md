@@ -7,12 +7,14 @@
 ## Project Log
 Add a new entry at the top each week.
 
+
+
 ### Week 9 - 11/16/26
 
 **Render Plan**
 - **User story:** As a music learner, I want a filter for the music education terminology so that I can look for a term by category instead of by name (which I might not know!).
 - **State:** What does the page remember, and what does it start at?
-  - The page remembers what category is selected in the filter. It starts with no categories selected, with all terms displayed.
+  - The page remembers what category is selected in the filter. It starts with all categories selected, with all terms displayed.
 - **What changes it:** Which user actions, and what does each one set the state to?
   - The user will select the category, and the selected category sets the state to only show those labeled items, hiding the ones that don't match the selected category.
 - **What render() draws:** Which part of the page is rebuilt, and from which array?
@@ -22,9 +24,9 @@ Add a new entry at the top each week.
 - **What else render() works out:** The count, message, or style that comes from the state.
   - It highlights the filter option that is currently selected.
 
-**What changed:**
+**What changed:** Made updates based on feedback from Week 8, and added week 8's redone assignment (based on my Week 6 array) into a render function, along with an if statement that checked if the shown tiles matched the selected categories from a series of buttons. Also added a highlight to each button to show which category was selected, and a "items shown" text that updates based on how many cards are being shown.
 
-**Patching vs. rendering:** I had to re-do Week 8 because it did not have to do with my array from Week 6. I re-did that week's assignment with the visual goal of changing the button colors when I clicked on new category buttons in the Music Education page, and then completed this week's render assignment which completed my filtering system to organize the terminology tiles I had built in Week 6. I now have a functioning filtering system that filters my music terms by category!
+**Patching vs. rendering:** Last week, when I worked on my page-turning assignment, the page was being directly changed by the actions of the user. Now, with the changes I made to my educational resources page, the changes made on the site (button clicking, etc) are only changing selectedCategory, and render redraws the page without changing anything to the site directly. I had to re-do Week 8 because it did not have to do with my array from Week 6. I re-did that week's assignment with the visual goal of changing the button colors when I clicked on new category buttons in the Music Education page, and then completed this week's render assignment which completed my filtering system to organize the terminology tiles I had built in Week 6. I now have a functioning filtering system that filters my music terms by category!
 
 **What was hard, and what I tried:** It was difficult to try and understand where exactly to place my assignment 6 loop per the instructions "Your existing Assignment 6 loop is probably most of render() already. Move it inside the function and add the if". I ended up doing a lot of trial and error on this step, and eventually hit something that worked. I also had to move forward and call render before I could see if it was actually working, then go back and tinker more.
 

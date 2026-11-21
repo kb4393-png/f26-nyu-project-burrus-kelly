@@ -52,7 +52,7 @@ const outsideButton = document.getElementById("outsidestaff");
 const insideButton = document.getElementById("insidestaff");
 const otherButton = document.getElementById("other");
 const dataFilter = document.getElementById("data-filter");
-const shown = document.getElementById("showing")
+const showing = document.getElementById("showing");
 
 //selecting a given filter button changes the selected category to the button's corresponding category
 allButton.addEventListener("click", () => {
@@ -75,7 +75,7 @@ otherButton.addEventListener("click", () => {
   render();
 });
 
-//Render: asks if items in educationItems match the selected category
+//Render: clears the box of all items and draws the education cards based on the selected category. It also draws the highlighted/selected button corresponding to the selected category, and displays the count of cards shown at any given time.
 function render() {
   // Clears old items
   container.innerHTML = "";

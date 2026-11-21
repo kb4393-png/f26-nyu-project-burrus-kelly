@@ -47,12 +47,15 @@ const educationItems = [
 
 //selected category defaults to all
 let selectedCategory = "all";
+//searchText starts with nothing
+let searchText = "";
 const allButton = document.getElementById("all");
 const outsideButton = document.getElementById("outsidestaff");
 const insideButton = document.getElementById("insidestaff");
 const otherButton = document.getElementById("other");
 const dataFilter = document.getElementById("data-filter");
 const showing = document.getElementById("showing");
+const searchInput = document.getElementById("search");
 
 //selecting a given filter button changes the selected category to the button's corresponding category
 allButton.addEventListener("click", () => {
@@ -74,6 +77,12 @@ otherButton.addEventListener("click", () => {
   selectedCategory = "other";
   render();
 });
+//add event listener to listen for inputted text in search bar
+searchInput.addEventListener("input", (event) => {
+  searchText = event.target.value;
+  render();
+});
+
 
 //Render: clears the box of all items and draws the education cards based on the selected category. It also draws the highlighted/selected button corresponding to the selected category, and displays the count of cards shown at any given time.
 function render() {
@@ -81,6 +90,7 @@ function render() {
   container.innerHTML = "";
   // Loops over array
   let shown = 0;
+
   educationItems.forEach(function(educationItem){
   
   if (selectedCategory === "all" || educationItem.Category === selectedCategory) {
@@ -88,6 +98,7 @@ function render() {
     const term = document.createElement('h2');
     const description = document.createElement('p');
     const image = document.createElement("img");
+
     educationItemDiv.classList.add('item');
 
     term.textContent = educationItem.term;
@@ -114,28 +125,24 @@ function render() {
   else {
     allButton.classList.remove("is-selected");
   }
-
   if (selectedCategory === "inside") {
     insideButton.classList.add("is-selected");
   }
   else {
     insideButton.classList.remove("is-selected");
   }
-
   if (selectedCategory === "outside") {
     outsideButton.classList.add("is-selected");
   }
   else {
     outsideButton.classList.remove("is-selected");
   }
-
   if (selectedCategory === "other") {
     otherButton.classList.add("is-selected");
   }
   else {
     otherButton.classList.remove("is-selected");
   }
-
-};
+  };
 
 render();

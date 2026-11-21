@@ -7,6 +7,22 @@
 ## Project Log
 Add a new entry at the top each week.
 
+### Week 10 — 11/22/26
+
+**Event Plan**
+- **User story:** As a music learner, I want to search for a specific music term so that I can look it up in real-time when my conductor mentions it during rehearsal.
+- **The event:** The event would be the user typing in a music term, and the displayed terms match what word the user typed. This fits what the user is doing and looking for in the user story because it allows them to search specifically for a term they don't understand when the conductor says it in person. It also would ideally show other terms that reference that term in their definitions to see other related terms.
+- **State:** The page remembers what the user has typed into the search bar. It starts with no text in the search bar except for maybe a placeholder prompt. This is based on my Week 9 assignment work.
+- **My function:** The question it answers would be "What is the user searching for, and do the resulting cards/terms match what the user has typed?". The parameter would be the text the user types in the search bar, and the return is a matching resource tile.
+
+**What changed:**
+**Why redraw on every event:** In 2–3 sentences, why does your handler call `render()` instead of changing the page itself?
+**What was hard, and what I tried:**
+**What happened when I tried to break it:**
+**What I learned or changed my mind about:**
+**Question for Joey:**
+**Next week's goal:**
+**AI use:**
 
 
 ### Week 9 - 11/16/26

@@ -27,9 +27,9 @@ Criterion 3: All repertoire is listed visibly on the page, and can be selected a
 
 **USER TEST NOTES (filled in by the maker)**
 Maker: Kelly Burrus
-Tester:
+Tester: Noah In
 
-Who the user is (one sentence):
+Who the user is (one sentence): A singer in a local choir who is looking to use a new tool to self-study their sheet music at home.
 
 Task 1 (full main story): "As a singer in my local choir, I want to study my parts using a method that works for me, so that I can keep up with our more advanced singers."
   Completed?  With trouble

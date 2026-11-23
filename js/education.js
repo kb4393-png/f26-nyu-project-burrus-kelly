@@ -83,6 +83,11 @@ searchInput.addEventListener("input", (event) => {
   render();
 });
 
+// Does the search input match the text in the card's title or description? Returns true or false
+function searchMatch(educationItems) {
+  const text = (educationItems.term + " " + educationItems.description).toLowerCase();
+  return text.includes(searchText.toLowerCase());
+}
 
 //Render: clears the box of all items and draws the education cards based on the selected category. It also draws the highlighted/selected button corresponding to the selected category, and displays the count of cards shown at any given time.
 function render() {
@@ -93,7 +98,8 @@ function render() {
 
   educationItems.forEach(function(educationItem){
   
-  if (selectedCategory === "all" || educationItem.Category === selectedCategory) {
+  //If the selectedCategory is equal to "all" or a given category included in the educationItem card, AND the search input matches a word in educationItem.
+  if ((selectedCategory === "all" || educationItem.Category === selectedCategory) && searchMatch(educationItem)) {
     const educationItemDiv = document.createElement('div');
     const term = document.createElement('h2');
     const description = document.createElement('p');
@@ -110,14 +116,23 @@ function render() {
     educationItemDiv.appendChild(image);
     educationItemDiv.appendChild(description);
     container.appendChild(educationItemDiv);
+
 //updates the number of tiles shown
     shown = shown + 1;
     }
   });
-  
+
+  if (shown === 0) {
+  // draw a message that tells the user what to do next
+  const empty = document.createElement("p");
+  empty.classList.add("empty");
+  empty.textContent = "Oops! Nothing here. Try another search or browse through the categories.";
+  container.appendChild(empty);
+  }
 
   //introduces the text showing how many items are displayed
   showing.textContent = "Showing " + shown + " of " + educationItems.length + " terms.";
+  
   //brings back the color-highlighted buttons when item is selected that I previously had.
   if (selectedCategory === "all") {
     allButton.classList.add("is-selected");

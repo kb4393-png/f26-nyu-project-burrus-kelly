@@ -136,6 +136,10 @@ button {
   color: #fafafa;
 }
 
+.empty {
+  color: #fafafa;
+}
+
 /* self-study: attempted to have one column for the selections on the left side, and the sheet music on the right taking up 2/3 of the page.*/
 /*BREAKPOINT: grid layout changes to expand sheet music when in mobile.
 /*UPDATE 11/6: Updated this to 4 columns in desktop to have a fwd and back button on either side of sheet music display

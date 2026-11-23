@@ -16,13 +16,26 @@ Add a new entry at the top each week.
 - **My function:** The question it answers would be "What is the user searching for, and do the resulting cards/terms match what the user has typed?". The parameter would be the text the user types in the search bar, and the return is a matching resource tile.
 
 **What changed:**
+- I added a search bar to the music term cards so the user can search by the name of a music term to find the definition. Cards only show up if they match the selected category AND if the term is searched for. I also gave my site text to display if no terms showed up after searching. 
 **Why redraw on every event:** In 2–3 sentences, why does your handler call `render()` instead of changing the page itself?
+- By redrawing the page every time a change is made, render provides a much cleaner way to display and process the search function than directly changing the page would. Calling render after any changes are made, like after each eventListener, automatically redraws everything to accommodate those changes, instead of having to specifically change everything directly in the page. 
 **What was hard, and what I tried:**
+- I felt this assignment was more straightforward after doing the code-along in class. I struggled when reading the instructions a few times to figure out where in my code certain functions and processes were supposed to go, like whether they made more sense inside or outside the render function for example. I was able to reference the codealong assignment and figure it out using that for the most part.
 **What happened when I tried to break it:**
+- At first when I tested my code in Console with "searchMatch(educationItems[0])" it came back as true, but I didn't understand why. I realized I had to have something typed into the search bar before this would make sense, and I had to research what the [0] meant in that code. I then realized 0 was the first term in the order they're listed in on the page when All is selected, so I tested it by typing both fermata and crescendo, crescendo matching the [0] marker, and both came back as expected - fermata returning false, and crescendo returning true.
+- When I tested the code that displayed a message when nothing was returned from the search input, the message displayed 5 times. I realized I had put it inside the forEach loop, so once I placed it outside those brackets, it only displayed once!
+- Otherwise, the state was as expected when loading the page. The search box was empty and the selected category was All. I tested by typing quickly, misspelling, selecting different categories before searching, and typing different variations of capital letters and lowercase letters. The count still makes sense and displays the current shown count out of the total amount of terms. Including a space before or after the term did seem to "break" it, but since some of the terms have spaces in them, like "Important Staff Markings", I don't know that I'd want to totally disallow spaces from being counted.
 **What I learned or changed my mind about:**
+- I think this particular lesson really hammered in what render does and how it can be way more effective for page changes like a search bar.I feel like before I sort-of understood it but wouldn't have been able to explain it, whereas now I feel I have a much better understanding. I wasn't sure if I should do this assignment for my term cards from my array, or if I should work on something with my drop-down menu idea for my sheet music page, but I'm glad I stuck to a more simple idea that we had gone over in class. I think I learned a lot more this way, and got a lot less frustrated than I would have gotten trying to start all over again for my drop-down idea. 
 **Question for Joey:**
+- Would using render be a good way to implement the drop-down for the sheet music page? I'd probably have to also change the page-turning mechanism to render as suggested in my week 9 feedback, right?
 **Next week's goal:**
+- Same goal as last week unfortunately. I think with Thanksgiving break I may be able to explore this with the holiday time off! "I think I might want to replace my forward and back buttons with the arrows like I have in my mockup, I just have to make those images first. I'd also like to replace some of my elements with the real thing, like the drop-down menu and have the launch button display the rest of the initially-hidden page."
 **AI use:**
+- Helped break down the logic in some of the code examples given in the assignment instructions so I could better implement it in my project. Also broke down some of the concepts given in this week that I was still a little iffy on.
+- Helped debug and troubleshoot when I couldn't figure out why something wasn't working - usually I added an extra curly bracket or other syntax error.
+- Helped more with logic to help me understand why certain things needed to be in render and why certain things needed to be outside of it.
+- Double-checked that my educationItem and educationItems labels were used correctly. Wasn't sure if I was pluralizing them in a way that was correct.
 
 
 ### Week 9 - 11/16/26

@@ -2,10 +2,67 @@
 
 **Latest mockups:** [https://www.figma.com/design/nAOf9RkdAvkm9qQtZCuUeL/KellyBurrus_Assignment4_Mockups?node-id=0-1&t=kF4IcDTFVODnTbqg-1]
 
-**Live site:** [link, once published]
+**Live site:** [https://kb4393-png.github.io/f26-nyu-project-burrus-kelly/]
 
 ## Project Log
 Add a new entry at the top each week.
+
+### Week 11 - 11/23/26  
+
+**USER STORY AUDIT**
+
+MAIN STORY: "As a singer in my local choir, I want to study my parts using a method that works for me, so that I can keep up with our more advanced singers."
+
+Criterion 1: The recordings and sheet music must be able to be viewed side-by-side.
+  Status: ❌
+  Notes: Functional music player missing, only a placeholder.
+
+Criterion 2: A 30-minute practice timer must be incorporated into the interface to help with self-study time management.
+  Status: ❌
+  Notes: No timer was designed. Dropped this to focus on the music education page. Might add this and keep both.
+
+Criterion 3: All repertoire is listed visibly on the page, and can be selected at any time to switch between songs.
+  Status: 🟡
+  Notes: All repertoire is visible (1), but no way to choose between songs right now.
+
+**USER TEST NOTES (filled in by the maker)**
+Maker: Kelly Burrus
+Tester:
+
+Who the user is (one sentence):
+
+Task 1 (full main story): "As a singer in my local choir, I want to study my parts using a method that works for me, so that I can keep up with our more advanced singers."
+  Completed?  With trouble
+  Where they hesitated or got stuck: Got stuck figuring out where on the page the music was supposed to be found, clicked a lot of buttons that I had been using as placeholders. Struggled to figure out what the two emoji buttons were that I was going to use to show categories of pop-ups that would have shown up on the sheet music images.
+  What they said they expected: Expected music to only appear when a button is clicked, based on the user interface of the site. Also expected music player to play.
+
+Task 2: Navigate to page 7 in the music and see the squiggly line in the second measure at the bottom of the page that says "gliss.". Go to the Music Education Resources page and find out what that symbol means.
+  Completed?  Yes
+  Where they hesitated or got stuck: Didn't really get stuck much - only hesitated when I was giving instruction on where to find the symbol, but when it came to the actual task of looking up a new symbol, that was easily completed.
+  What they said they expected: No expectations that weren't already met.
+
+Tester's one-line takeaway (ask them at the end):
+"The one thing I'd fix first is the placement of the forward and back buttons on the sheet music. The placement at the top feels a little awkward/unnatural."
+
+
+**PUNCH LIST**
+
+MUST SHIP (aim for 3–5 items; note where each came from: story audit or user test)
+- Change placement and style of forward and back buttons. This is from the tester's one-line takeaway, and coincidentally aligns with my goal for next week.
+- Music player. This came from both witnessing the user test and from my story audit.
+- Drop-down menu for song selection. This came from my story audit, in that I need the songs to be visibly available on screen to switch between.
+- Timer for self-study. I am realizing this is something I totally forgot about pretty early on in the project, but since I might be cutting the education category emoji buttons, I might be able to swap them visually.
+
+NICE TO HAVE
+- Launch button should reveal the sheet music section, which is hidden upon first view of the website.
+- This is a major stretch goal, but since I have both a Rehearsal Calendar button at the bottom and in the navbar, I thought it might be nice to create a demo page with an example picture of a rehearsal schedule/calendar.
+- I could also create a very simple page with a list of links (dead links for the purpose of the demo site) to "downloadable versions" of the sheet music documents to link to Sheet Music Hub. Again, a major stretch goal.
+
+CUT (item, then why)
+- Educational icons by music player - scope is too small in this project to implement the pop-up educational tiles in the sheet music.
+-
+
+
 
 ### Week 10 — 11/22/26
 

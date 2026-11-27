@@ -78,10 +78,39 @@ button {
   height: auto;
 }
 
+/* changed fwd-btn and back-btn classes to remove the traditional button characteristics from it and make sure it's only the fwdarrow and backarrow pngs acting as the button with transparent backgrounds.*/
+#back-btn{
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+#fwd-btn{
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  cursor: pointer;
+}
+
 .item {
   border: 1px solid var(--accent-color);
   padding: 16px;
   border-radius: 8px;
+}
+
+.fwd-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Style work on navbar to get the text looking more normal.

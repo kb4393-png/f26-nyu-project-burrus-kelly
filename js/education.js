@@ -84,9 +84,9 @@ searchInput.addEventListener("input", (event) => {
 });
 
 // Does the search input match the text in the card's title or description? Returns true or false
-function searchMatch(educationItems) {
-  const text = (educationItems.term + " " + educationItems.description).toLowerCase();
-  return text.includes(searchText.toLowerCase());
+function searchMatch(educationItem) {
+  const text = (educationItem.term + " " + educationItem.description).toLowerCase();
+  return text.includes(searchText.trim().toLowerCase());
 }
 
 //Render: clears the box of all items and draws the education cards based on the selected category. It also draws the highlighted/selected button corresponding to the selected category, and displays the count of cards shown at any given time.

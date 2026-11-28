@@ -64,3 +64,4 @@ restartButton.addEventListener("click", ()=> {
 
 //Current Page Sentence in self-study section
 pageReport.textContent = `Page ${pageCount} of ${pageTotal}`;
+

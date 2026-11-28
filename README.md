@@ -7,9 +7,30 @@
 ## Project Log
 Add a new entry at the top each week.
 
-### Week 11 - 11/23/26  
+### Week 11 - 11/29/26  
 
-**USER STORY AUDIT**
+**Main user story:** As a singer in my local choir, I want to study my parts using a method that works for me, so that I can keep up with our more advanced singers.
+**Live page:** https://kb4393-png.github.io/f26-nyu-project-burrus-kelly/ 
+
+**Punch list results**
+- Must-ship items finished:  
+  - Change placement and style of forward and back buttons. This is from the tester's one-line takeaway, and coincidentally aligns with my goal for next week.
+  - Music player. This came from both witnessing the user test and from my story audit. Used [this source](https://www.sitepoint.com/community/t/simple-audio-player-for-web-page/345548) for information on the audio element after finding tons of overly complicated options on the internet. The audio element worked perfectly fine for my particular needs here. Added a cute purple background so it's more visible.
+  - Drop-down menu for song selection. This came from my story audit, in that I need the songs to be visibly available on screen to switch between.
+  - Timer for self-study. I am realizing this is something I totally forgot about pretty early on in the project, but since I might be cutting the education category emoji buttons, I might be able to swap them visually.
+- Items I cut, and why:
+  - Pop-up notes on sheet music images, both educational notes and performance notes, along with their corresponding emoji buttons I had added prematurely to the page to categorize them. This process would have been a lot more complicated than I had time to complete in this semester.
+  - 
+
+**What my user test showed:** What did your tester struggle with, and what did you change because of it?  
+**What changed since my Week 4 mockup, and why (if anything):**  
+**The hardest problem this semester, and how I solved it:**  
+**What I'd build next if I had more time:**  
+**AI use:**
+  - I used AI to help me figure out how to remove the standard button style for my fwd and back arrows after putting the imaged into the buttons. I had to re-class both fwd-btn and back-btns to ensure there was no background. I also had to add the cursor detail as I noticed the cursor wouldn't change to a clickable pointer image when hovering over it without that aspect. I used AI here because the forum posts I found didn't quite fit what I wanted and I struggled to Google exactly the terms I needed to get to my goal.
+  - 
+
+**USER STORY AUDIT (11/23/26)**
 
 MAIN STORY: "As a singer in my local choir, I want to study my parts using a method that works for me, so that I can keep up with our more advanced singers."
 

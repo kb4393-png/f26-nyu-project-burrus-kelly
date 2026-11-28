@@ -34,15 +34,19 @@
         </div>
         <!--row 2-->
         <div class="hero-selection">
-          <button><p>Select a song and get started!</p></button>
-        </div>
-        <!--row 3-->
-        <div class="hero-launch">
-          <button> Launch Practice Session!</button>
+          <p>Select a song and get started!</p>
+          <!--Song Selection Dropdown-->
+          <label for="song-selection">Select your song</label>
+          <select id="song-selection">
+            <option value=""></option>
+            <option value="Free">Free</option>
+            <option value="Song 2">Song 2</option>
+            <option value="Song 3">Song 3</option>
+          </select>
         </div>
       </section>
       <!-- SELF-STUDY-->
-        <section class="self-study">
+        <section id="self-study" class="self-study is-hidden">
           <!--column 1: self-study controls-->
           <div class="self-study-controls">
             <h2>Hear a practice track:</h2>
@@ -52,19 +56,19 @@
             <source src="songs/Free1.mp3" type="audio/mpeg">
             </audio>
             <h3>Sopranos only:</h3>
-            <audio id="playlistAll" controls>
+            <audio id="playlistSoprano" controls>
             <source src="songs/Free-Soprano_metronome1.mp3" type="audio/mpeg">
             </audio>
             <h3>Altos only:</h3>
-            <audio id="playlistAll" controls>
+            <audio id="playlistAlto" controls>
             <source src="songs/Free-Alto_metronome1.mp3" type="audio/mpeg">
             </audio>
             <h3>Tenors only:</h3>
-            <audio id="playlistAll" controls>
+            <audio id="playlistTenor" controls>
             <source src="songs/Free-Tenor_metronome1.mp3" type="audio/mpeg">
             </audio>
             <h3>Basses only:</h3>
-            <audio id="playlistAll" controls>
+            <audio id="playlistBass" controls>
             <source src="songs/Free-Bass_metronome1.mp3" type="audio/mpeg">
             </audio>
           </div>

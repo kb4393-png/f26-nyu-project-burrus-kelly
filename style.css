@@ -160,9 +160,6 @@ button {
   gap: 16px;
 }
 
-.is-hidden {
-  display: none;
-}
 
 .is-selected {
   background: #926900;
@@ -194,4 +191,8 @@ button {
   gap: 8px;
   text-align: center;
   }
+}
+
+.is-hidden {
+  display: none;
 }
